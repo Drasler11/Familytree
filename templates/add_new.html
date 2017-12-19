@@ -1,0 +1,55 @@
+
+{% extends "base.html" %}
+
+{% block title %}Family Tree{% endblock title %}
+
+{% block specifika %}
+    <h4 align="center">Add new member!</h4>
+        <br>
+        <br>
+
+        <div class="jumbotron">
+
+            <form method="post" action="/added_member">
+
+
+                <div class="input-group">
+                  <span class="input-group-addon" id="basic-addon1">Full name</span>
+                  <input name="full_name" type="text" class="form-control" placeholder="Name and Surname" aria-describedby="basic-addon1">
+                </div>
+
+                <br>
+
+                <div class="input-group">
+                  <span class="input-group-addon" id="basic-addon2">Birth date</span>
+                  <input name="birth_date" type="text" class="form-control" placeholder="12.12.1999" aria-describedby="basic-addon1">
+                </div>
+
+                <br>
+
+                <div class="input-group">
+                  <span class="input-group-addon" id="basic-addon3">Current home</span>
+                  <input name="hometown" type="text" class="form-control" placeholder="Hometown" aria-describedby="basic-addon1">
+                </div>
+
+                <br>
+
+                <p>Choose Primary Family: </p>
+
+                <div class="btn-group" role="group" aria-label="Basic example">
+                  <button name="primary_family" type="button" class="btn btn-secondary">Marjan Drasler</button>
+                  <button name="primary_family" type="button" class="btn btn-secondary">Joze Drasler</button>
+                  <button name="primary_family" type="button" class="btn btn-secondary">Viktor Drasler</button>
+                </div>
+
+                <br>
+                <br>
+
+                <button type="submit" class="btn"><a href="/added_member">Add</a></button>
+
+            </form>
+
+        </div>
+
+
+{% endblock specifika %}

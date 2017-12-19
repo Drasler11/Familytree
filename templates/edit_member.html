@@ -1,0 +1,21 @@
+{% extends "base.html" %}
+
+{% block title %}Family Tree{% endblock title %}
+
+
+{% block specifika %}
+
+
+    <div class="jumbotron">
+        <h4>Edit member's data</h4>
+
+
+        <form action="/member/{{ member.key.id() }}/edit" method="post">
+            <input name="input" value="{{ member.input }}">
+
+            <button type="submit">OK</button>
+        </form>
+
+    </div>
+
+{% endblock specifika %}

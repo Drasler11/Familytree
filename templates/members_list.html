@@ -1,0 +1,24 @@
+
+{% extends "base.html" %}
+
+{% block title %}Family Tree{% endblock title %}
+
+{% block specifika %}
+     <div class="jumbotron">
+         <h2>All members</h2>
+
+
+        <ol>
+            {% for member in members %}
+
+                <li>{{ member.full_name }}, {{ sporocilo.key.id() }}
+                    <a href="/member/{{ member.key.id() }}">{{member.vnos}}</a>
+                </li>
+
+            {% endfor %}
+        </ol>
+
+
+     </div>
+
+{% endblock specifika %}

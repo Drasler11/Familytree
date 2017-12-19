@@ -1,0 +1,27 @@
+
+{% extends "base.html" %}
+
+{% block title %}Family Tree{% endblock title %}
+
+{% block specifika %}
+
+    <div class="jumbotron" align="center">
+
+        {% if logiran %}
+            <h4>Hello,{{ user.nickname() }}</h4>
+            <p>You are already signed in.</p>
+
+            <p><a href="{{ logout_url }}">Log out</a></p>
+
+        {% else %}
+            <h4>Hello, stranger</h4>
+            <p>You are not signed in. Please do that to see your family tree.</p>
+
+            <button class="btn" type="button"><a href="{{ login_url }}">Sign In</a></button>
+
+        {% endif %}
+
+    </div>
+
+
+{% endblock specifika %}
